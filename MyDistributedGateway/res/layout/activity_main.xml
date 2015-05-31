@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mydistributedgateway.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <TextView
+        android:id="@+id/incomingData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/editIp"
+        android:layout_marginTop="23dp"
+        android:text="Incoming Data :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/v_incomingData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/incomingData"
+        android:layout_alignBottom="@+id/incomingData"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_toRightOf="@+id/committedData"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/committedData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/incomingData"
+        android:layout_below="@+id/incomingData"
+        android:layout_marginTop="22dp"
+        android:text="Committed Data :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/v_committedData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/committedData"
+        android:layout_alignBottom="@+id/committedData"
+        android:layout_alignRight="@+id/v_incomingData"
+        android:layout_toRightOf="@+id/committedData"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/incomingData"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Serverip" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_connect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editIp"
+        android:layout_toRightOf="@+id/editIp"
+        android:text="connect" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/committedData"
+        android:layout_below="@+id/committedData"
+        android:layout_marginTop="22dp"
+        android:text="State :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/v_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/state"
+        android:layout_alignBottom="@+id/state"
+        android:layout_alignRight="@+id/v_committedData"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Not Connected"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
