@@ -3,7 +3,8 @@ package com.example.mydistributedgateway;
 import com.example.userdefinedpart.SensingService;
 import com.example.userdefinedpart.SensingService.MyBinder;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
 
 	private SensingService myService;
