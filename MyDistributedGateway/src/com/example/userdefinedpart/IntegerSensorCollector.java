@@ -2,10 +2,10 @@ package com.example.userdefinedpart;
 
 import java.net.Socket;
 
-import com.example.datacollector.DataCollector;
 import com.example.datacollector.Handler;
+import com.example.datacollector.ServerRunner;
 
-public class IntegerSensorCollector extends DataCollector{
+public class IntegerSensorCollector extends ServerRunner{
 
 	@Override
 	public void refineData(Socket socket) {

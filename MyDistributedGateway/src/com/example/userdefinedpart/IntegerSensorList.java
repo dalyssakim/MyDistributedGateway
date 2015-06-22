@@ -9,9 +9,13 @@ public class IntegerSensorList extends DataAccessObject{
 
 	public static IntegerSensorList sensors;
 
+	private IntegerSensorList(){
+		super();
+	}
+	
 	public static IntegerSensorList getIntegerSensorList(){
 		if(sensors == null){
-			return new IntegerSensorList();
+			sensors = new IntegerSensorList();
 		}
 		return sensors;
 	}

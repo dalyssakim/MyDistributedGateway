@@ -4,13 +4,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public abstract class DataCollector extends Thread{
+public abstract class ServerRunner extends Thread{
 
-	public final int PORT = 8888;
+	public int PORT = 8888;
 	private boolean stopThread = false;
 	public abstract void refineData(Socket socket);
 	
-	public void startCollector(){
+	public void setPort(int port){
+		this.PORT = port;
+	}
+	
+	public void startServer(){
 	ServerSocket server = null;
 		
 		try{
@@ -29,7 +33,7 @@ public abstract class DataCollector extends Thread{
 	}
 	
 	public void run(){
-		startCollector();
+		startServer();
 	}
 	
 	public void runCollector(){
